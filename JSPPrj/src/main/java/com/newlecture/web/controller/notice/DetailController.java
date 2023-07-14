@@ -30,7 +30,7 @@ public class DetailController extends HttpServlet {
 		request.setAttribute("n", notice);
 		
 		//forward
-		request.getRequestDispatcher("/WEB-INF/view//notice/detail.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/view/notice/detail.jsp").forward(request, response);
 		
 	}
 

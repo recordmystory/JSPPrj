@@ -49,7 +49,7 @@ public class ListController extends HttpServlet {
 		request.setAttribute("list", list);
 		request.setAttribute("count", count);
 		// forward
-		request.getRequestDispatcher("/WEB-INF/view/notice/list.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/view/admin/board/notice/list.jsp").forward(request, response);
 
 	}
 }
