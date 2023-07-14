@@ -26,7 +26,7 @@ public class NoticeService {
 		int result = 0;
 
 		
-		String sql = "INSERT INTO NOTICE(TITLE, CONTENT, WRITER_ID, PUB) VALUES(?,?,?,?)";
+		String sql = "INSERT INTO NOTICE(TITLE, CONTENT, WRITER_ID, PUB, FILES) VALUES(?,?,?,?,?)";
 
 		String url = "jdbc:mysql://localhost:3306/jsp";
 
@@ -38,6 +38,7 @@ public class NoticeService {
 			st.setString(2, notice.getContent());
 			st.setString(3, notice.getWriterId());
 			st.setBoolean(4, notice.isPub());
+			st.setString(5, notice.getFiles());
 			
 			result = st.executeUpdate(); // 레코드 가져오기
 
