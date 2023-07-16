@@ -44,12 +44,12 @@ public class ListController extends HttpServlet {
 			page = Integer.parseInt(page_);
 
 		NoticeService service = new NoticeService();
-		List<NoticeView> list = service.getNoticeList(field, query, page);
+		List<NoticeView> list = service.getNoticePubList(field, query, page);
 		int count = service.getNoticeCount(field, query);		
 		request.setAttribute("list", list);
 		request.setAttribute("count", count);
 		// forward
-		request.getRequestDispatcher("/WEB-INF/view/admin/board/notice/list.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/view/notice/list.jsp").forward(request, response);
 
 	}
 }
